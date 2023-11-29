@@ -8,6 +8,7 @@
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 a {
@@ -21,17 +22,23 @@ a {
   max-width: 1080p;
   margin: 0 auto;
   padding: 0 15px;
+  background-color: #222;
+  height: calc(100vh - 60px);
+  overflow: scroll;
 }
 
 /* DEBUG */
 
 .debug {
   min-height: 80px;
-  background-color: #777;
   padding: 2rem;
 }
 
 /* WEBAPP */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* HEADER */
 
@@ -43,8 +50,37 @@ a {
 
 .header button {
   color: white;
-  background-color: #777;
+  background-color: rgba(211, 211, 211, 0.4);
   margin-right: 5px;
   margin-top: 5px;
   padding: 3px;
+}
+
+/* MAIN */
+
+#cameras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.card {
+  position: relative;
+  margin-top: 10px;
+  margin-right: 5px;
+  max-width: calc(100% / 7 - 5px);
+  color: white;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(211, 211, 211, 0.3);
+  padding: 3px 4px;
+  font-size: 0.8rem;
+}
+
+.card-text span {
+  margin-right: 5px;
 }
